@@ -6,11 +6,30 @@ We will be building an API for the purpose of accessing application data program
 
 Your database will be PSQL, and you will interact with it using [node-postgres](https://node-postgres.com/).
 
-## Kanban
 
-### Link to your Trello Board here: https://trello.com/b/gBtX4GN3/be-nc-games
+### Setting up database connection to `test` and `development` databases
 
-To keep track of the tasks involved in this project we're going to use a kanban board. Ensure that you work on one _ticket_ at time. You can click on the ticket to find out more information about what is required for the feature. A ticket is not considered complete unless both the happy path and errors response are handled. You can make use of the checklist on each ticket to keep track of the errors you want to handle. You can also make use of [error-handling.md](error-handling.md) to consider the error codes we may wish to respond with.
+You will need to create two .env files for your project: `.env.test` and `.env.development`. Into each, add PGDATABASE=<database_name_here> (for this project, the database name is nc_games), with the correct database name for that environment (see /db/setup.sql for the database names). Double check that these .env files are .gitignored.
+
+> _`dotenv` is a [module that loads environment variables from a `.env` file into the `process.env` global object]
+
+### 1. GET /api/categories
+
+This endpoint should respond with a json object containing a key of `categories` with a value of an array of all the category objects. 
+
+E.g.
+
+```js
+{
+  "categories": [
+    // ... category objects
+  ]
+}
+```
+
+
+
+
 
 **Please ensure you work through the tickets in numerical order.**
 
