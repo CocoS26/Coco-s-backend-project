@@ -7,7 +7,6 @@ const {
 const {getCategories} = require('./controllers/controller.categories');
 
 const app = express ();
-app.use(express.json());
 
 //1. Get /api/categories
 
